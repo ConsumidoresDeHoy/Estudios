@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Interactivo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Panel deslizante -->
+    <div id="sidebar" class="sidebar">
+        <button class="btn btn-light" id="closeSidebar">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <h3>Buscar Estudio</h3>
+        <input type="text" id="searchInput" class="form-control" placeholder="Busca un estudio...">
+        <button id="searchBtn" class="btn btn-primary mt-2 w-100">Buscar</button>
+
+        <h4 class="mt-4">Estudios Realizados</h4>
+        <ul id="studies" class="list-group">
+            <!-- Los estudios se agregarán aquí dinámicamente -->
+        </ul>
+        
+        <!-- Aquí agregamos el mensaje que aparecerá si no se encuentra el estudio -->
+        <div id="searchMessage" style="display: none; color: red; font-weight: bold; margin-top: 10px;">
+            Estudio no realizado
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container text-center my-5">
+        <h1 class="display-4 mb-4">El SNACK PERFECTO! 😋</h1>
+        <p class="lead mb-4">Aquí puedes ver los resultados de nuestro estudio. Buscando el mejor snack y viendo la preferencia del consumidor: Qué team eres ¿#Salado o #Dulce?</p>
+        
+        <!-- Botón para abrir el panel deslizante (en la esquina derecha) -->
+        <button class="btn btn-highlight" id="openSidebar">
+            <i class="fas fa-arrow-right"></i> Buscar Estudio
+        </button>
+
+        <!-- Gráfica -->
+        <div class="chart-container mt-5">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- Sección de redes sociales -->
+        <div class="social-icons mt-5">
+            <a href="https://www.facebook.com/consumidoresdehoy" target="_blank" class="social-icon" style="color: #1877f2;">
+                <i class="fab fa-facebook fa-3x"></i>
+            </a>
+            <a href="https://www.instagram.com/consumidoresdehoy/" target="_blank" class="social-icon" style="color: #e4405f;">
+                <i class="fab fa-instagram fa-3x"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

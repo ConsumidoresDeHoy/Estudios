@@ -1,0 +1,235 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fondo suave */
+}
+
+/* Títulos y textos */
+h1, h3, h4 {
+    color: #00C3B1; /* Rojo vibrante para los títulos */
+}
+
+h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para el panel deslizante */
+.sidebar {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    right: -280px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 0 10px; /* Bordes redondeados */
+    transition: 0.3s;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.sidebar button {
+    background-color: #FFAF4A; /* Botón de cierre con color llamativo */
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.sidebar button:hover {
+    background-color: #e5533b; /* Color más oscuro al pasar el ratón */
+}
+
+#searchInput {
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #FFAF4A; /* Borde rojo al enfocar */
+}
+
+#searchBtn {
+    background-color: #ff6347;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 12px 0;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #e5533b;
+}
+
+/* Estilo para los estudios */
+#studies {
+    margin-top: 30px;
+}
+
+.list-group-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #ff6347;
+    color: white;
+    transform: translateX(10px); /* Efecto de movimiento suave */
+}
+
+/* Estilo para abrir el panel */
+#openSidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: #FFAF4A;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#openSidebar:hover {
+    background-color: #e5533b;
+}
+
+/* Gráfica */
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 2px solid #f1f1f1;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-icons {
+    margin-top: 50px;
+}
+
+.social-icon {
+    margin: 0 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon i {
+    font-size: 3rem;
+}
+
+/* Estilo para el botón "Buscar Estudio" */
+.btn-highlight {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #39FF14; /* Un verde brillante que destaca */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 10;
+}
+
+.btn-highlight:hover {
+    background-color: #32D700; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el ratón */
+}
+
+.btn-highlight i {
+    font-size: 22px; /* Tamaño del ícono dentro del botón */
+    margin-right: 10px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .chart-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .social-icon {
+        font-size: 2.5rem;
+    }
+
+    #openSidebar, .btn-highlight {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #searchInput, #searchBtn {
+        font-size: 14px;
+    }
+
+    /* Mejorar el layout para pantallas muy pequeñas */
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Media query para pantallas muy pequeñas (menor a 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .chart-container {
+        padding: 10px;
+    }
+
+    .social-icon {
+        font-size: 2rem;
+    }
+
+    #openSidebar, .btn-highlight {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #searchInput, #searchBtn {
+        font-size: 14px;
+    }
+}
